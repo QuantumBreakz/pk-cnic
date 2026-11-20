@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pk-cnic"
+dynamic = ["version"]
+description = "Validate, normalise and read Pakistani CNIC numbers (13-digit format, region and gender digits, Urdu digits)"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "Ali Ahmed" }]
+keywords = ["cnic", "pakistan", "nadra", "kyc", "identity", "validation", "ocr", "urdu"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://aliahmed.si/"
+Documentation = "https://aliahmed.si/blog/pakistan-cnic-number-validation/"
+"KYC pipeline" = "https://aliahmed.si/blog/how-kyc-identity-verification-works/"
+"Urdu OCR" = "https://aliahmed.si/blog/ocr-non-latin-scripts-arabic-urdu/"
+Source = "https://github.com/QuantumBreakz/pk-cnic"
+Issues = "https://github.com/QuantumBreakz/pk-cnic/issues"
+
+[project.scripts]
+pk-cnic = "pk_cnic:main"
+
+[tool.hatch.version]
+path = "src/pk_cnic/__init__.py"
